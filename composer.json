@@ -29,7 +29,7 @@
         "phpstan/phpstan": "1.9.x-dev"
     },
     "scripts": {
-        "phpunit": "./vendor/bin/phpunit -c ./phpunit.xml.dist --migrate-configuration",
+        "phpunit": "./vendor/bin/phpunit -c ./phpunit.xml.dist",
         "phpstan": "./vendor/bin/phpstan analyse -c phpstan.neon.dist --memory-limit=2G",
         "all": [
             "@phpunit",
