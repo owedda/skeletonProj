@@ -1,0 +1,39 @@
+{
+    "name": "ovidijus/pirma-uzd",
+    "description": "Basic skeleton php project",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Ovidijus\\PirmaUzd\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Ovidijus\\PirmaUzd\\Tests\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "OvidijusRapalis",
+            "email": "orapalis@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": "^8.0",
+        "guzzle/guzzle": "3.9.x-dev"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "10.0.x-dev",
+        "phpstan/phpstan": "1.9.x-dev"
+    },
+    "scripts": {
+        "phpunit": "./vendor/bin/phpunit -c ./phpunit.xml.dist",
+        "phpstan": "./vendor/bin/phpstan analyse -c phpstan.neon.dist --memory-limit=2G",
+        "all": [
+            "@phpunit",
+            "@phpstan"
+        ]
+    }
+}
